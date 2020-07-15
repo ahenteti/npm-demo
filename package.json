@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "tsc": "tsc",
-    "prestart": "tsc",
+    "prestart": "tsc && cp src/index.html dist",
     "start": "cross-env PORT=4001 node dist/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

@@ -1,10 +1,10 @@
-const express = require('express');
-const app = express();
+import express = require('express');
+const app: express.Application = express();
 const port = process.env.PORT || 4000;
 
-app.get('/', function (req: any, res: any) {
-  console.log('enter get / method');
-  res.send('Hello World!');
+app.get('/', function (req, res) {
+  console.log("enter get('/') method");
+  res.sendFile(__dirname + '/index.html');
 });
 
 app.listen(port, function () {
